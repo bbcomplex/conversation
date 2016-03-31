@@ -66,8 +66,12 @@ window.$(document).ready(function() {
         })
         // gather tests back into an array
         .toArray()
-        .map(tests => ({ ...rest, tests, originalCode }));
+        .map(tests => ({ ...rest, tests, originalCode, iLoveMeSomeIframes }));
     };
+
+    function moarArrays(){
+      console.log('This is not an array!');
+    }
 
   // used when updating preview without running tests
   common.checkPreview$ = function checkPreview$(args) {
