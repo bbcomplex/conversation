@@ -37,6 +37,30 @@ window.$(document).ready(function() {
         return Rx.Observable.throw(window.__err);
       }
 
+  common.runPreviewTests$ =
+    function runPreviewTests$({
+    tests = [],
+    originalCode,
+    ...rest
+  }) {
+      const code = originalCode;
+      const editor = { getValue() { return originalCode; } };
+      if (window.__err) {
+        return Rx.Observable.throw(window.__err);
+      }
+      
+  common.runPreviewTests$ =
+    function runPreviewTests$({
+    tests = [],
+    originalCode,
+    ...rest
+  }) {
+      const code = originalCode;
+      const editor = { getValue() { return originalCode; } };
+      if (window.__err) {
+        return Rx.Observable.throw(window.__err);
+      }
+
       // Iterate throught the test one at a time
       // on new stacks
       return Rx.Observable.from(tests, null, null, Rx.Scheduler.default)
@@ -70,7 +94,10 @@ window.$(document).ready(function() {
     };
 
     function moarArrays(){
+      console.log('Nope');
       console.log('This is not an array!');
+
+      console.log('How about this');
     }
 
   // used when updating preview without running tests
