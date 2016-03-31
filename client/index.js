@@ -9,8 +9,7 @@ import { createHistory } from 'history';
 import app$ from '../common/app';
 import provideStore from '../common/app/provide-store';
 
-// client specific sagas
-import sagas from './sagas';
+
 
 // render to observable
 import render from '../common/app/utils/render';
